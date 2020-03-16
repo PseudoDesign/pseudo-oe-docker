@@ -51,7 +51,8 @@ ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
 
 # Create the "downloads" and "tmp" directories
-RUN mkdir -p /app/oe/downloads && mkdir -p /app/oe/tmp && chown -R oe-user:oe-user /app/oe
+# Removed since CircleCI expects this to be empty.  May need to add again for local builds
+# RUN mkdir -p /app/oe/downloads && mkdir -p /app/oe/tmp && chown -R oe-user:oe-user /app/oe
 
 USER oe-user
 WORKDIR /app/oe
